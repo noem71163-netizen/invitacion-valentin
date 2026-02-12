@@ -1,0 +1,60 @@
+body {
+    background-color: #fce4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    overflow: hidden; /* Evita que salgan barras de scroll si el botón crece mucho */
+}
+
+#container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    border: 4px solid #f06292;
+    position: relative;
+}
+
+.corazones { font-size: 2rem; margin-bottom: 10px; }
+h1 { color: #ad1457; font-size: 1.5rem; }
+
+.botones {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease-in-out; /* Animación de crecimiento */
+    z-index: 2;
+}
+
+#btn-si {
+    background-color: #f06292;
+    color: white;
+}
+
+#btn-no {
+    background-color: #eeeeee;
+    color: #757575;
+    z-index: 1; /* El botón NO queda por debajo del SÍ cuando crezca */
+}
+
+.hidden { display: none; }
+.info-cita { text-align: left; display: inline-block; margin: 20px 0; font-size: 1.2rem; }
+.te-amo { color: #f06292; margin-top: 20px; }
